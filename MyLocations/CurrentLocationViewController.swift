@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class CurrentLocationViewController: UIViewController {
+class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {
 
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -19,7 +21,9 @@ class CurrentLocationViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func getLocation() {
-      // do nothing yet
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
     }
 
     override func viewDidLoad() {
