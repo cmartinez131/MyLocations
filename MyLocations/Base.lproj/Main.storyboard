@@ -68,6 +68,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get My Location"/>
+                                <connections>
+                                    <action selector="getLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzo-fY-4P1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -80,9 +83,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tag" id="GHz-4k-aoB"/>
                     <connections>
+                        <outlet property="addressLabel" destination="xGS-BN-3bk" id="1lS-wP-YYc"/>
+                        <outlet property="getButton" destination="JJg-To-4gB" id="NHZ-w6-mRp"/>
                         <outlet property="latitudeLabel" destination="wSB-kx-9WN" id="bj8-Gx-udZ"/>
                         <outlet property="longitudeLabel" destination="IbE-Xl-cZi" id="fhE-bl-b0a"/>
                         <outlet property="messageLabel" destination="9Eq-oL-FxL" id="v7I-gO-JJt"/>
+                        <outlet property="tagButton" destination="scz-dS-G0K" id="ndr-Jb-ewf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
